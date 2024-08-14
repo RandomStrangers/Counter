@@ -15,8 +15,8 @@ jobs:
         shell: bash
         id: compile
         run: |
-          msbuild Counters.sln /p:Configuration=Debug
-          cp -R bin/Debug bin/Debug_normal
+          msbuild Counters.sln /p:Configuration=Release
+          cp -R bin/Release bin/Release_normal
           msbuild Starter/Starter.csproj /p:Configuration=Release
 
       - uses: ./.github/actions/notify_failure
@@ -28,7 +28,7 @@ jobs:
       - uses: ./.github/actions/notify_success
         if: ${{ always() && steps.compile.outcome == 'success' }}
         with:
-          SOURCE_FILE: 'bin/Debug'
+          SOURCE_FILE: 'bin/Release'
           DEST_NAME: 'Counter'
           NOTIFY_MESSAGE: 'Successfully compiled Counter <@999409543001931788>'
           WEBHOOK_URL: '${{ secrets.WEBHOOK_URL }}'

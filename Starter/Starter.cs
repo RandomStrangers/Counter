@@ -34,8 +34,6 @@ class Starter
         Process.Start("Counter 1.1.2.exe");
         Process.Start("Counter 1.1.3.exe");
         Process.Start("Counter 1.1.4.exe");
-        Process.Start("Counter 1.1.5.exe");
-        Process.Start("Counter 1.1.6.exe");
         Process.Start("Counter 1.1.5A.exe");
     }
 }

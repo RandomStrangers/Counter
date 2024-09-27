@@ -1,8 +1,8 @@
-using System;
+﻿using System;
 using System.Threading;
-public class Counter_1_1_3A
+public class Counter_1_1_5A
 {
-    public const string InternalVersion = "1.1.3a";
+    public const string InternalVersion = "1.1.5a";
     public const string Text = "Counter v" + InternalVersion;
     public static string arg;
     public static void Main(string[] args)
@@ -18,15 +18,31 @@ public class Counter_1_1_3A
         {
             Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.BackgroundColor = ConsoleColor.Black;
-            Console.WriteLine("No argument found, running Counter v" + Counter_1_1_2.InternalVersion);
+            Console.WriteLine("No argument found, running Counter v" + Counter_1_1_4.InternalVersion);
             Thread.Sleep(1000);
-            Counter_1_1_2.Main();
+            Counter_1_1_4.Main();
             return;
         }
     }
     public static void VersionChoice()
     {
-        if (arg.CaselessContains("1.1.2"))
+        if (arg.CaselessContains("1.1.4"))
+        {
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.BackgroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("Running: Counter v" + Counter_1_1_4.InternalVersion);
+            Thread.Sleep(1000);
+            Counter_1_1_4.Main();
+        }
+        else if (arg.CaselessContains("1.1.3"))
+        {
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.BackgroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("Running: Counter v" + Counter_1_1_3.InternalVersion);
+            Thread.Sleep(1000);
+            Counter_1_1_3.Main();
+        }
+        else if (arg.CaselessContains("1.1.2"))
         {
             Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.BackgroundColor = ConsoleColor.DarkYellow;
@@ -208,9 +224,9 @@ public class Counter_1_1_3A
         {
             Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.BackgroundColor = ConsoleColor.Black;
-            Console.WriteLine("Running: Counter v" + Counter_1_1_1.InternalVersion);
+            Console.WriteLine("Running: Counter v" + Counter_1_1_4.InternalVersion);
             Thread.Sleep(1000);
-            Counter_1_1_1.Main();
+            Counter_1_1_4.Main();
         }
     }
 }

@@ -1,47 +1,48 @@
 using System;
 using System.Threading;
-    public class Counter_1_1_4A
-    {
-        public const string InternalVersion = "1.1.4a";
-        public const string Text = "Counter v" + InternalVersion;
-        public static string arg;
+public class Counter_1_1_4A
+{
+    public const string InternalVersion = "1.1.4a";
+    public const string Text = "Counter v" + InternalVersion;
+    public static string arg;
     public static void Main(string[] args)
-        {
+    {
         Console.Title = Text;
         Console.WriteLine(Text);
-          if (args.Length > 0)
-          {
-          arg = args[0]; 
-          VersionChoice();
-          }
-          else 
-          {
+        if (args.Length > 0)
+        {
+            arg = args[0];
+            VersionChoice();
+        }
+        else
+        {
             Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.BackgroundColor = ConsoleColor.Black;
             Console.WriteLine("No argument found, running Counter v" + Counter_1_1_3.InternalVersion);
             Thread.Sleep(1000);
             Counter_1_1_3.Main();
-          return;
-          }
+            return;
         }
-    public static void VersionChoice() {
-      if (arg.CaselessContains("1.1.3"))
-      {
-          Console.ForegroundColor = ConsoleColor.DarkRed;
-          Console.BackgroundColor = ConsoleColor.DarkYellow;
-          Console.WriteLine("Running: Counter v" + Counter_1_1_3.InternalVersion);
-          Thread.Sleep(1000);
-          Counter_1_1_3.Main();
-      }
-      else if (arg.CaselessContains("1.1.2"))
-      {
-          Console.ForegroundColor = ConsoleColor.DarkRed;
-          Console.BackgroundColor = ConsoleColor.DarkYellow;
-          Console.WriteLine("Running: Counter v" + Counter_1_1_2.InternalVersion);
-          Thread.Sleep(1000);
-          Counter_1_1_2.Main();
-      }
-      else if (arg.CaselessContains("1.1.1"))
+    }
+    public static void VersionChoice()
+    {
+        if (arg.CaselessContains("1.1.3"))
+        {
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.BackgroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("Running: Counter v" + Counter_1_1_3.InternalVersion);
+            Thread.Sleep(1000);
+            Counter_1_1_3.Main();
+        }
+        else if (arg.CaselessContains("1.1.2"))
+        {
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.BackgroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("Running: Counter v" + Counter_1_1_2.InternalVersion);
+            Thread.Sleep(1000);
+            Counter_1_1_2.Main();
+        }
+        else if (arg.CaselessContains("1.1.1"))
         {
             Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.BackgroundColor = ConsoleColor.Black;

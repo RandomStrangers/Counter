@@ -1,30 +1,31 @@
 using System;
 using System.Threading;
-    public class Counter_1_1_2A
-    {
-        public const string InternalVersion = "1.1.2a";
-        public const string Text = "Counter v" + InternalVersion;
-        public static string arg;
+public class Counter_1_1_2A
+{
+    public const string InternalVersion = "1.1.2a";
+    public const string Text = "Counter v" + InternalVersion;
+    public static string arg;
     public static void Main(string[] args)
-        {
+    {
         Console.Title = Text;
         Console.WriteLine(Text);
-          if (args.Length > 0)
-          {
-          arg = args[0]; 
-          VersionChoice();
-          }
-          else 
-          {
+        if (args.Length > 0)
+        {
+            arg = args[0];
+            VersionChoice();
+        }
+        else
+        {
             Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.BackgroundColor = ConsoleColor.Black;
             Console.WriteLine("No argument found, running Counter v" + Counter_1_1_1.InternalVersion);
             Thread.Sleep(1000);
             Counter_1_1_1.Main();
-          return;
-          }
+            return;
         }
-    public static void VersionChoice() {
+    }
+    public static void VersionChoice()
+    {
         if (arg.CaselessContains("1.1.1"))
         {
             Console.ForegroundColor = ConsoleColor.DarkRed;

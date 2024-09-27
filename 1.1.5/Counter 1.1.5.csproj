@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{FD13EAD7-38F4-4253-B4A8-0F3829C8D14E}</ProjectGuid>
+    <ProjectGuid>{869287EB-B49D-4FF9-AF2F-8C8EDD9FA62A}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Starter</RootNamespace>
-    <AssemblyName>Starter</AssemblyName>
+    <RootNamespace>Counter</RootNamespace>
+    <AssemblyName>Counter 1.1.5</AssemblyName>
     <IntermediateOutputPath>..\obj\$(Configuration)\</IntermediateOutputPath>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <TargetFrameworkProfile>
@@ -19,23 +19,23 @@
     <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Starter.ico</ApplicationIcon>
+    <ApplicationIcon>Counter.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Counter.Starter</StartupObject>
+    <StartupObject>Counter</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <OutputPath>..\Bin\Release\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="Starter.cs" />
+    <Compile Include="Counter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Starter.ico" />
+    <Content Include="Counter.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

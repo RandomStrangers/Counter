@@ -14,10 +14,10 @@ public static class Counter
     public static short j = short.MaxValue;
     public static ushort k = ushort.MinValue;
     public static ushort l = ushort.MaxValue;
-    public static byte m = byte.MinValue;
-    public static byte n = byte.MaxValue;
-    public static sbyte o = sbyte.MinValue;
-    public static sbyte p = sbyte.MaxValue;
+    public static sbyte m = sbyte.MinValue;
+    public static sbyte n = sbyte.MaxValue;
+    public static byte o = byte.MinValue;
+    public static byte p = byte.MaxValue;
     public static float q = float.MinValue;
     public static float r = float.MaxValue;
     public static double s = double.MinValue;
@@ -34,8 +34,8 @@ public static class Counter
             || g != ulong.MaxValue || h != ulong.MinValue
             || i != short.MaxValue || j != short.MinValue
             || k != ushort.MaxValue || l != ushort.MinValue
-            || m != byte.MaxValue || n != byte.MinValue
-            || o != sbyte.MaxValue || p != sbyte.MinValue
+            || m != sbyte.MaxValue || n != sbyte.MinValue
+            || o != byte.MaxValue || p != byte.MinValue
             || q != float.MaxValue || r != float.MinValue
             || s != double.MaxValue || t != double.MinValue)
         {
@@ -147,41 +147,41 @@ public static class Counter
             {
                 Console.WriteLine("L is " + ushort.MinValue);
             }
-            if (m != byte.MaxValue)
+            if (m != sbyte.MaxValue)
             {
                 m++;
                 Console.WriteLine(m);
             }
-            if (m == byte.MaxValue)
+            if (m == sbyte.MaxValue)
             {
-                Console.WriteLine("M is " + byte.MaxValue);
+                Console.WriteLine("M is " + sbyte.MaxValue);
             }
-            if (n != byte.MinValue)
+            if (n != sbyte.MinValue)
             {
                 n--;
                 Console.WriteLine(n);
             }
-            if (n == byte.MinValue)
+            if (n == sbyte.MinValue)
             {
-                Console.WriteLine("N is " + byte.MinValue);
+                Console.WriteLine("N is " + sbyte.MinValue);
             }
-            if (o != sbyte.MaxValue)
+            if (o != byte.MaxValue)
             {
                 o++;
                 Console.WriteLine(o);
             }
-            if (o == sbyte.MaxValue)
+            if (o == byte.MaxValue)
             {
-                Console.WriteLine("O is " + sbyte.MaxValue);
+                Console.WriteLine("O is " + byte.MaxValue);
             }
-            if (p != sbyte.MinValue)
+            if (p != byte.MinValue)
             {
                 p--;
                 Console.WriteLine(p);
             }
-            if (p == sbyte.MinValue)
+            if (p == byte.MinValue)
             {
-                Console.WriteLine("P is " + sbyte.MinValue);
+                Console.WriteLine("P is " + byte.MinValue);
             }
             if (q != float.MaxValue)
             {
@@ -223,7 +223,7 @@ public static class Counter
         if (a == int.MaxValue && c == uint.MaxValue
             && e == long.MaxValue && g == ulong.MaxValue
             && i == short.MaxValue && k == ushort.MaxValue
-            && m == byte.MaxValue && o == sbyte.MaxValue
+            && m == sbyte.MaxValue && o == byte.MaxValue
             && q == float.MaxValue && s == double.MaxValue)
         {
             Console.WriteLine("Max limit reached!");
@@ -233,8 +233,8 @@ public static class Counter
             g = ulong.MinValue;
             i = short.MinValue;
             k = ushort.MinValue;
-            m = byte.MinValue;
-            o = sbyte.MinValue;
+            m = sbyte.MinValue;
+            o = byte.MinValue;
             q = float.MinValue;
             s = double.MinValue;
             Console.WriteLine("Press any key to restart!");
@@ -244,7 +244,7 @@ public static class Counter
         if (b == int.MinValue && d == uint.MinValue
             && f == long.MinValue && h == ulong.MinValue
             && j == short.MinValue && l == ushort.MinValue
-            && n == byte.MinValue && p == sbyte.MinValue
+            && n == sbyte.MinValue && p == byte.MinValue
             && r == float.MinValue && t == double.MinValue)
         {
             Console.WriteLine("Min limit reached!");
@@ -254,8 +254,8 @@ public static class Counter
             h = ulong.MaxValue;
             j = short.MaxValue;
             l = ushort.MaxValue;
-            n = byte.MaxValue;
-            p = sbyte.MaxValue;
+            n = sbyte.MaxValue;
+            p = byte.MaxValue;
             r = float.MaxValue;
             t = double.MaxValue;
             Console.WriteLine("Press any key to restart!");

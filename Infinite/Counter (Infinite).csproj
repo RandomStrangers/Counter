@@ -6,8 +6,8 @@
     <ProjectGuid>{5521F65C-80E3-44B2-99C2-5A19ED0AC85E}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Counter</RootNamespace>
-    <AssemblyName>Counter inf</AssemblyName>
+    <RootNamespace>Infinite_Counter</RootNamespace>
+    <AssemblyName>Counter %28Infinite%29</AssemblyName>
     <IntermediateOutputPath>..\obj\$(Configuration)\</IntermediateOutputPath>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <TargetFrameworkProfile>
@@ -22,7 +22,7 @@
     <ApplicationIcon>Counter.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Counter.Inf</StartupObject>
+    <StartupObject>Infinite_Counter.Infinite</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <OutputPath>..\Bin\Release\</OutputPath>
